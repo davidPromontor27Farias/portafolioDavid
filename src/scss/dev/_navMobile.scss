@@ -1,0 +1,28 @@
+.nav-mobile{
+    display: flex;
+    flex-direction: column;
+ 
+    
+    
+
+}
+
+.nav-mobile a{
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-right: 0;
+    padding: 2rem;
+}
+
+.nav-mobile a:hover{
+    color: $oscuro-intenso;
+}
+.contenido-max{
+    max-width: 110rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.proyectos img{
+    width: 30rem;
+}

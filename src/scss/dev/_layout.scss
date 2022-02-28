@@ -1,0 +1,109 @@
+.contenedor{
+    max-width: 110rem;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+/*Are de la navegaciomn*/
+.barra-navegacion{
+    
+    background-color: $oscuro-intenso;
+}
+
+.imagen-icono > img{
+    width: 8rem;
+    border-radius: 50%;
+}
+.legacy{
+    margin: 0;
+    padding: 0;
+    color: $blanco;
+}
+
+.enlaces{
+    font-size: $small;
+    margin-right: 1.5rem;
+    color: $blanco;
+    text-transform: uppercase;
+  
+}
+
+
+.enlaces{
+    position: relative;
+    padding-bottom: 1rem;
+    transition: all .3s;
+
+    
+}
+/*Efectos a los enlaces*/
+.enlaces::before{
+    content: "";
+    display: block;
+    margin: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(to right, $morado-oscuro,  $blanco);
+    position: absolute;
+    bottom: 0;
+    transition: all .3s;
+}
+.enlaces:hover{
+    color: var(--oscuro-opaco);
+}
+.enlaces:hover:before{
+    width: 100%;    
+}
+.enlaces:before{
+    left: 50%;
+}
+.enlaces:hover:before{
+    left: 0;
+}
+
+
+.icono-hamburguesa img{
+    width: 5rem;
+    filter: invert(100%);
+}
+
+
+/*Navegacion mobile*/
+.navegacion-mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;   
+    height: 100vh;
+    background-color: $oscuro-opaco;
+    padding: 2rem;
+    box-shadow: -10px 0 40px $oscuro-intenso;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@include telefono{
+    .navegacion-tab-desk{
+        display: none;
+    }
+}
+
+@include tablet{
+    .navegacion-tab-desk{
+        display: block;
+    }
+
+    .icono-hamburguesa{
+        display: none;
+    }
+
+    .navegacion-mobile{
+        display: none;
+    }
+
+}
