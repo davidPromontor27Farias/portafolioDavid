@@ -1,0 +1,51 @@
+.presentacion{
+    margin-top: 7rem;
+
+    .name{
+        text-align: center;
+        font-size: $mediana;
+        color: $oscuro-opaco;
+    }
+
+    
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    
+    .myPhoto{
+        margin: 0 auto;
+    }
+
+
+    .info-my{
+
+        p{
+            font-size: $normal;
+            line-height: 2.5rem;
+            text-align: center;
+        }
+    }
+
+}
+
+@include tablet{
+    .description{
+        flex-direction: row;
+        gap: 3rem;
+        margin-top: 6rem;
+        .myPhoto img{
+            width: 40rem;
+            height: 40rem;
+        }
+    
+        
+        .info-my{
+            p{
+                text-align: initial;
+            }
+        }
+    }
+    
+}
