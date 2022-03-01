@@ -1,0 +1,55 @@
+.proyectos{
+    margin-top: 6rem;
+
+    .projects{
+        font-size: $mediana;
+        color: $oscuro-opaco;
+        text-align: center;
+
+
+    }
+
+    .proyectos-info{
+        div{
+            background-color: $blanco2;
+            padding: 1.5rem;
+            border-radius: .8rem;
+            margin-bottom: 2rem;
+    
+    
+            p{
+                font-size: $normal;
+                color: $oscuro-intenso;
+                text-align: center;
+                line-height: 2.8rem;
+            }
+        }
+    
+    }
+
+    @include tablet{
+
+        .proyectos-info{
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+
+            div{
+                margin-bottom: 0;
+            }
+
+            div:last-child{
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+        }
+
+
+        
+    }
+
+        
+    
+}
