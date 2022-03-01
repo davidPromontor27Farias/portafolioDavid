@@ -87,7 +87,9 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    transition: .3s ease-in;
 }
+
 
 @include telefono{
     .navegacion-tab-desk{
@@ -108,4 +110,14 @@
         display: none;
     }
 
+}
+
+
+
+
+.show-nav-mobile{
+    
+    visibility: visible;
+    opacity: 1;
+    transition: .3s ease-in;
 }
