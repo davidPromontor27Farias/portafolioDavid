@@ -70,8 +70,25 @@
     width: 5rem;
     filter: invert(100%);
 }
+.navegacion{
+    display: flex;
+    align-items: center;
+}
+.icon-desk{
+    align-items: center;
+    margin-left: 3rem;
+    
+    display: none;
+    img{
+        width: 4rem;
+    }
+}
 
-
+@include tablet{
+    .icon-desk{
+        display: block;
+    }
+}
 /*Navegacion mobile*/
 .navegacion-mobile{
     position: fixed;
@@ -88,6 +105,7 @@
     visibility: hidden;
     opacity: 0;
     transition: .3s ease-in;
+    z-index: 4;
 }
 
 
@@ -121,3 +139,31 @@
     opacity: 1;
     transition: .3s ease-in;
 }
+
+.oscuro-agregado{
+    transition: .3s all ease-in-out;
+    background-color: $oscuro-mod;
+    
+
+    h1, p, h2{
+        color: $blanco;
+    }
+
+    .presentacion .name{
+        color: $blanco;
+    }
+
+    #habilidades{
+        background-color: $oscuro-intenso;
+
+        h2{
+            color: $blanco;
+        }
+
+        .descripcion-habilidades div{
+            background-color: rgb(27, 24, 24);
+        }
+    }
+}
+
+
