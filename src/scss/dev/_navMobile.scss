@@ -27,5 +27,21 @@
 
 .icon-dark{
     position: absolute;
-    top: 20px;
+    top: 45px;
+    width: 4rem;
+    right: 120px;
+
+}
+
+@include tablet{
+    .icon-dark{
+        left: 200px;
+    }
+}
+
+@include desktop{
+    .icon-dark{
+        left: unset;
+        right: 35px;
+    }
 }

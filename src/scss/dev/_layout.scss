@@ -74,21 +74,7 @@
     display: flex;
     align-items: center;
 }
-.icon-desk{
-    align-items: center;
-    margin-left: 3rem;
-    
-    display: none;
-    img{
-        width: 4rem;
-    }
-}
 
-@include tablet{
-    .icon-desk{
-        display: block;
-    }
-}
 /*Navegacion mobile*/
 .navegacion-mobile{
     position: fixed;
@@ -105,7 +91,7 @@
     visibility: hidden;
     opacity: 0;
     transition: .3s ease-in;
-    z-index: 4;
+    z-index: 7;
 }
 
 
@@ -144,10 +130,12 @@
     transition: .3s all ease-in-out;
     background-color: $oscuro-mod;
     
+    
 
     h1, p, h2{
         color: $blanco;
     }
+
 
     .presentacion .name{
         color: $blanco;
@@ -155,6 +143,7 @@
 
     #habilidades{
         background-color: $oscuro-intenso;
+        box-shadow: 0 8px 10px 1px rgba(143, 21, 125, 0.14), 0 3px 14px 2px rgba(148, 13, 114, 0.12), 0 5px 5px -3px rgba(139, 10, 81, 0.3);
 
         h2{
             color: $blanco;
@@ -162,8 +151,83 @@
 
         .descripcion-habilidades div{
             background-color: rgb(27, 24, 24);
+            
+        }
+    }
+
+
+    .proyectos{
+
+        
+        h2{
+            color: $blanco;
+        }
+
+
+        .proyectos-info .proyecto{
+            background-color: $oscuro-intenso;
+            box-shadow: 0 8px 10px 1px rgba(133, 153, 43, 0.14), 0 3px 14px 2px rgba(141, 148, 44, 0.12), 0 5px 5px -3px rgba(141, 163, 43, 0.3);
+        
+
+            div{
+                background-color: $oscuro-intenso
+            }
+            p{
+                color: $blanco;
+            }
+        }
+    }
+
+    
+
+}
+
+
+.squineX{
+    position: fixed;
+    left: 70px;
+    z-index: 8;
+}
+
+.wallpaper-image{
+    background-image: url(/build/img/imagenesProyectos/triangleWallpapers.webp);
+    background-position: center center;
+    background-size: cover;
+    width: auto;
+    height: 55rem;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .letter-title{
+        z-index: 5;
+        font-size: $mediana;
+        color: $blanco;
+        
+        
+    }
+
+    @include tablet{
+        .letter-title{
+            font-size: $grande;
         }
     }
 }
 
+.wallpaper-image::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0 , 0, .5);
+    z-index: 3;
+}
 
+.skills-col{
+    color: #c99806;
+    font-style: normal;
+}
