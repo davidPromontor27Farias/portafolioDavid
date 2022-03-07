@@ -43,7 +43,7 @@
 
         img{
             width: 5rem;
-            border-radius: 50%;
+            filter: invert(100%);
         }
     }
 }

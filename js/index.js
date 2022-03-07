@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     showNavMobile(iconNav);
 
     modDark();
+    smoothScroll();
 });
 window.addEventListener('scroll', mostrarScroll);
 
@@ -88,5 +89,22 @@ function modDark(){
     }
     else{
         document.classList.remove('oscuro-agregado');
+    }
+}
+
+function smoothScroll(){
+
+    const links = document.querySelectorAll('.behavior a');
+
+    for(let i = 0; i < links.length; i++){
+        
+        links[i].addEventListener('click', function(e){
+            e.preventDefault();
+            const seccion = document.querySelector(e.target.attributes.href.value);
+
+            seccion.scrollIntoView({
+                behavior: 'smooth'
+            })
+        })
     }
 }
